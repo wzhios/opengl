@@ -79,5 +79,9 @@
 
 * 将矩阵传递给shader
 
+> glDrawElements\(GL\_TRIANGLES,sizeof\(indices\) /sizeof\(indices\[0\]\),GL\_UNSIGNED\_INT, indices\);
+
+* 使用索引绘图
+
 
 
