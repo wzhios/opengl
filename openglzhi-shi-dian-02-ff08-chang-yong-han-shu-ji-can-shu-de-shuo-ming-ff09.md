@@ -56,3 +56,21 @@
 
 
 
+> 以下为透视相关操作函数
+>
+> GLuint projectionMatrixSlot =glGetUniformLocation\(self.myProgram,"projectionMatrix"\);//获取着色器程序中,指定为uniform类型变量的id，也就是获取透视矩阵（projectionMatrix表示是透视矩阵）的下标位置
+>
+> KSMatrix4\_projectionMatrix;
+>
+> ksMatrixLoadIdentity\(&\_projectionMatrix\);//生成透视矩阵
+>
+> ksPerspective\(&\_projectionMatrix,30.0, aspect,5.0f,20.0f\);//透视变换，视角30°，5个参数的意义：result矩阵，视角，长宽比，近平面距离，远平面距离。
+
+> //设置glsl里面的投影矩阵
+>
+> glUniformMatrix4fv\(projectionMatrixSlot,1,GL\_FALSE, \(GLfloat\*\)&\_projectionMatrix.m\[0\]\[0\]\);//调用glUniformMatrix4fv这个函数，将矩阵传递到Shader中。它的参数分别为：下标位置，矩阵数量，是否进行转置，矩阵
+>
+> glEnable\(GL\_CULL\_FACE\);//开启剔除操作效果,glCullFace指明多边形的前面或后面是否被剔除
+
+
+
