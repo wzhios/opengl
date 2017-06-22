@@ -1,4 +1,4 @@
-# opengl\_知识点03（frame Buffer 和 render Buffer） {#wangzwangzewangzehwangzehuwangzehuawangzehuanwangzehuang汪泽煌}
+# opengl\_知识点03（frame Buffer 和 render Buffer） {#汪泽煌}
 
 buffer分为frame buffer和render buffer两大类，其中frame buffer相当于render buffer的管理者，frame buffer object即称为FBO，常用于做离屏渲染缓冲等。render buffer则又可分为三类，color buffer / depth buffer / stencil buffer。
 
