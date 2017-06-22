@@ -43,12 +43,16 @@
 > CAEAGLLayer的属性 ：drawableProperties ，直接将设置放在字典中赋值即可
 >
 > self.myEagLayer.drawableProperties= \[NSDictionarydictionaryWithObjectsAndKeys:
-
+>
 > \[NSNumbernumberWithBool:NO\],kEAGLDrawablePropertyRetainedBacking,kEAGLColorFormatRGBA8,kEAGLDrawablePropertyColorFormat,nil\];
 
 * kEAGLDrawablePropertyRetainedBacking--为FALSE，表示不想保持呈现的内容，因此在下一次呈现时，应用程序必须完全重绘一次，将该设置为TRUE对性能和资源影像较大，因此只有当renderbuffer需要保持其内容不变时，我们才设置为TRUE
 
-*  kEAGLDrawablePropertyColorFormat--颜色格式，枚举值
+* kEAGLDrawablePropertyColorFormat--颜色格式，枚举值
+
+> \[self.myContextrenderbufferStorage:GL\_RENDERBUFFERfromDrawable:self.myEagLayer\];
+
+* 为颜色缓冲区分配存储空间
 
 
 
