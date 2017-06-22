@@ -68,8 +68,9 @@
 > glUniformMatrix4fv\(projectionMatrixSlot,1,GL\_FALSE, \(GLfloat\*\)&\_projectionMatrix.m\[0\]\[0\]\);//调用glUniformMatrix4fv这个函数，将矩阵传递到Shader中。它的参数分别为：下标位置，矩阵数量，是否进行转置，矩阵
 >
 > glEnable\(GL\_CULL\_FACE\);//开启剔除操作效果,glCullFace指明多边形的前面或后面是否被剔除
->
-> * 
+
+---------------------------------------------------
+
 > ksMatrixMultiply\(&\_modelViewMatrix, &\_rotationMatrix, &\_modelViewMatrix\)
 
 * 把变换矩阵相乘，注意先后顺序
