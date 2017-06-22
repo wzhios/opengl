@@ -69,11 +69,15 @@
 >
 > glEnable\(GL\_CULL\_FACE\);//开启剔除操作效果,glCullFace指明多边形的前面或后面是否被剔除
 
----------------------------------------------------
+---
 
 > ksMatrixMultiply\(&\_modelViewMatrix, &\_rotationMatrix, &\_modelViewMatrix\)
 
 * 把变换矩阵相乘，注意先后顺序
+
+> glUniformMatrix4fv\(modelViewMatrixSlot,1,GL\_FALSE, \(GLfloat\*\)&\_modelViewMatrix.m\[0\]\[0\]\);
+
+* 将矩阵传递给shader
 
 
 
