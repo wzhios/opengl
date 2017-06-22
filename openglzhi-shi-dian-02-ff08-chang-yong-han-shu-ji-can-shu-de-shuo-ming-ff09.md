@@ -1,4 +1,4 @@
-# openGL 常用函数及参数的说明
+# openGL 常用函数及参数的说明 {#汪泽煌}
 
 > \[EAGLContextsetCurrentContext:self.mContext\];
 
