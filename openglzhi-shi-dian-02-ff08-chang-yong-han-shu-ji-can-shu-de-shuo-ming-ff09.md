@@ -40,7 +40,15 @@
 
 * CAEAGLLayer提供了一个OpenGLES渲染环境。各种各样的OpenGL绘图缓冲的底层可配置项仍然需要你用CAEAGLLayer完成，它是CALayer的一个子类，用来显示任意的OpenGL图形。OpenGL由近350个不同的函数调用组成，用来从简单的图元绘制复杂的三维景象，主要用途是CAD、科学可视化程序、虚拟现实、游戏程序设计。
 
-> CAEAGLLayer的属性 ：drawableProperties
+> CAEAGLLayer的属性 ：drawableProperties ，直接将设置放在字典中赋值即可
+>
+> self.myEagLayer.drawableProperties= \[NSDictionarydictionaryWithObjectsAndKeys:
+
+> \[NSNumbernumberWithBool:NO\],kEAGLDrawablePropertyRetainedBacking,kEAGLColorFormatRGBA8,kEAGLDrawablePropertyColorFormat,nil\];
+
+* kEAGLDrawablePropertyRetainedBacking--为FALSE，表示不想保持呈现的内容，因此在下一次呈现时，应用程序必须完全重绘一次，将该设置为TRUE对性能和资源影像较大，因此只有当renderbuffer需要保持其内容不变时，我们才设置为TRUE
+
+*  kEAGLDrawablePropertyColorFormat--颜色格式，枚举值
 
 
 
